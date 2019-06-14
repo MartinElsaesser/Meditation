@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="theme-color" content="#3131f5">
+	<link rel="stylesheet" href="CSS/styles.css">
+	<link rel="manifest" href="manifest.json">
+	<link rel="canonical" href="https://martinelsaesser.github.io/Meditation/">
+	<!-- Icons -->
+	<link rel="shortcut icon" href="Pictures/icons/icon-96x96.png" type="image/x-icon">
+	<link rel="icon" sizes="96x96" href="Pictures/icons/icon-96x96.png">
+	<link rel="fluid-icon" type="image/png" href="Pictures/icons/icon-192x192.png">
+	<title>Meditation</title>
+</head>
+
+<body>
+	<div class="timer">00:00</div>
+	<button class="control play-pause running"><i class="far fa-pause-circle"></i></button>
+	<button class="control stop running"><i class="far fa-stop-circle"></i></button>
+	<div class="meditation-container animation running">
+		<div class="border-circle">
+			<div class="sector right">
+				<div class="sector-half sector-half-1"></div>
+				<div class="sector-half sector-half-2"></div>
+				<div class="sector-half sector-gap-closer"></div>
+			</div>
+			<div class="sector bottom">
+				<div class="sector-half sector-half-1"></div>
+				<div class="sector-half sector-half-2"></div>
+				<div class="sector-half sector-gap-closer"></div>
+			</div>
+			<div class="sector left">
+				<div class="sector-half sector-half-1"></div>
+				<div class="sector-half sector-half-2"></div>
+				<div class="sector-half sector-gap-closer"></div>
+			</div>
+		</div>
+		<div class="marker-circles">
+			<div class="turn-to top">
+				<div class="sector filled half">
+					<div class="sector-half sector-half-1"></div>
+					<div class="sector-half sector-half-2"></div>
+					<div class="sector-half sector-gap-closer"></div>
+				</div>
+			</div>
+			<div class="turn-to left">
+				<div class="sector filled half">
+					<div class="sector-half sector-half-1"></div>
+					<div class="sector-half sector-half-2"></div>
+					<div class="sector-half sector-gap-closer"></div>
+				</div>
+			</div>
+			<div class="turn-to right">
+				<div class="sector filled half">
+					<div class="sector-half sector-half-1"></div>
+					<div class="sector-half sector-half-2"></div>
+					<div class="sector-half sector-gap-closer"></div>
+				</div>
+			</div>
+			<div class="turn-to animation running">
+				<div class="sector filled half">
+					<div class="sector-half sector-half-1"></div>
+					<div class="sector-half sector-half-2"></div>
+					<div class="sector-half sector-gap-closer"></div>
+				</div>
+			</div>
+		</div>
+		<div class="circle filled middle"></div>
+		<div class="text-frame running">
+			<div class="text-container animation running">
+				<div class="text">Einatmen</div>
+				<div class="text">Halten</div>
+				<div class="text">Ausatmen</div>
+			</div>
+		</div>
+	</div>
+	<script src="JS/timer.js"></script>
+	<script src="JS/elements-observer.js"></script>
+	<script src="JS/sw-register.js"></script>
+	<script src="JS/app.js"></script>
+</body>
+
+</html>

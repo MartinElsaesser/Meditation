@@ -1,0 +1,84 @@
+@import "./libraries/font-awesome.css";
+@import "./components/button-controls.css";
+@import "./components/timer.css";
+@import "./components/text-frame.css";
+@import "./libraries/circle-sector.css";
+@import "./components/border-circle.css";
+@import "./components/marker-circles.css";
+
+:root {
+	--text-size: 30px;
+	--text-pos-0: var(--text-size);
+	--text-pos-1: 0px;
+	--text-pos-2: calc(var(--text-size) * -1.5);
+	--text-pos-3: calc(var(--text-size) * -3);
+	--text-pos-4: calc(var(--text-size) * -4);
+}
+
+body,
+html {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	color: #ffffff;
+	user-select: none;
+}
+body {
+	position: relative;
+	background-image: url("../Pictures/background.jpg");
+	background-size: cover;
+}
+
+.animation {
+	animation-timing-function: linear;
+	animation-duration: 8s;
+	animation-iteration-count: infinite;
+	animation-play-state: paused;
+}
+.animation.running {
+	animation-play-state: running;
+}
+.animation.paused {
+	animation-play-state: paused !important;
+}
+.animation.stopped {
+	animation: none !important;
+}
+
+.meditation-container {
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	animation-name: pulse;
+}
+
+.circle.filled.middle {
+	width: 85%;
+	height: 85%;
+	border-radius: 50%;
+	position: absolute;
+	box-sizing: border-box;
+	background: radial-gradient(#3131f5 5%, #706bfd 90%);
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(1) translate(-50%, -50%);
+	}
+	37.5% {
+		transform: scale(1.05) translate(-47.5%, -50%);
+	}
+	62.5% {
+		transform: scale(1.05) translate(-47.5%, -50%);
+	}
+	100% {
+		transform: scale(1) translate(-50%, -50%);
+	}
+}

@@ -1,0 +1,62 @@
+.sector {
+	--interior-angle: 0deg;
+	--angle: 0deg;
+	--radius: 0px;
+	--border-size: 0px;
+	--border-color: transparent;
+	--background-color: transparent;
+	height: calc(var(--radius) * 2);
+	width: calc(var(--radius) * 2);
+	overflow: hidden;
+	position: relative;
+	box-sizing: border-box;
+}
+
+.sector .sector-half {
+	height: var(--radius);
+	width: calc(var(--radius) * 2);
+	transform-origin: 50% 100%;
+	overflow: hidden;
+	position: absolute;
+	background-color: inherit;
+}
+
+.sector .sector-half-1 {
+	transform: rotate(calc(90deg + var(--angle)));
+}
+
+.sector .sector-half-2 {
+	transform: rotate(calc(90deg + var(--angle) + var(--interior-angle) / 2));
+}
+
+.sector .sector-half::before {
+	position: absolute;
+	content: "";
+	border-radius: var(--radius) var(--radius) 0 0;
+	transform-origin: 50% 100%;
+	transform: rotate(calc(-180deg + var(--interior-angle) * 0.5));
+	height: calc(var(--radius) - var(--border-size));
+	width: calc(var(--radius) * 2 - var(--border-size) * 2);
+	border-left: var(--border-size) solid var(--border-color);
+	border-right: var(--border-size) solid var(--border-color);
+	border-top: var(--border-size) solid var(--border-color);
+	clip-path: polygon(
+		0 0,
+		0 100%,
+		var(--border-size) 100%,
+		50% 50%,
+		calc(100% - var(--border-size)) 100%,
+		100% 100%,
+		100% 0
+	);
+}
+
+.sector.filled .sector-half::before {
+	background-color: var(--background-color);
+	clip-path: none;
+}
+
+.sector-gap-closer {
+	transform: rotate(calc(90deg + var(--angle) + var(--interior-angle) / 4));
+	z-index: 1;
+}

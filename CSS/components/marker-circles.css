@@ -1,0 +1,52 @@
+.marker-circles {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+.marker-circles .turn-to {
+	--rotation: 0deg;
+	height: 100%;
+	width: 10px;
+	position: absolute;
+	left: 50%;
+	transform-origin: center center;
+	z-index: 1;
+	transform: translateX(-50%) rotate(var(--rotation));
+}
+.marker-circles .turn-to.top {
+	--rotation: 0deg;
+}
+.marker-circles .turn-to.right {
+	--rotation: 135deg;
+}
+.marker-circles .turn-to.left {
+	--rotation: 225deg;
+}
+.marker-circles .turn-to.animation {
+	transform: translateX(-50%) rotate(0deg);
+	animation-name: rotate-marker-circle;
+	z-index: 1;
+}
+.marker-circles .turn-to.animation .sector.half {
+	--background-color: #cf5757;
+}
+.marker-circles .sector.filled.half {
+	--border-size: 2px;
+	--background-color: #96e0e2;
+	--radius: 5px;
+	--interior-angle: 180deg;
+	--angle: 90deg;
+	position: absolute;
+	transform: translateY(-50%);
+	width: 10px;
+	height: 10px;
+}
+
+@keyframes rotate-marker-circle {
+	0% {
+		transform: translateX(-50%) rotate(0deg);
+	}
+	100% {
+		transform: translateX(-50%) rotate(360deg);
+	}
+}

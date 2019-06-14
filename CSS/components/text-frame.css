@@ -1,0 +1,48 @@
+.text-frame {
+	overflow: hidden;
+	height: var(--text-size);
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 100%;
+}
+.text-frame .text-container {
+	animation-name: go-up;
+	transform: translateY(var(--text-pos-0));
+}
+.text-frame .text-container .text {
+	margin: 0;
+	margin-bottom: calc(var(--text-size) / 2);
+	padding: 0;
+	font-size: var(--text-size);
+	height: var(--text-size);
+	text-align: center;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+@keyframes go-up {
+	0% {
+		transform: translateY(var(--text-pos-0));
+	}
+	1.16% {
+		transform: translateY(var(--text-pos-1));
+	}
+	36.04% {
+		transform: translateY(var(--text-pos-1));
+	}
+	38.37% {
+		transform: translateY(var(--text-pos-2));
+	}
+	61.63% {
+		transform: translateY(var(--text-pos-2));
+	}
+	63.96% {
+		transform: translateY(var(--text-pos-3));
+	}
+	98.84% {
+		transform: translateY(var(--text-pos-3));
+	}
+	100% {
+		transform: translateY(var(--text-pos-4));
+	}
+}

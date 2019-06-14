@@ -1,0 +1,29 @@
+/* Play-/Pause-/Stoppbutton */
+.control {
+	all: unset;
+	position: absolute;
+	background: transparent;
+	color: #ffffff;
+	font-size: 3rem;
+	cursor: pointer;
+	transition: 300ms all;
+	-webkit-tap-highlight-color: transparent;
+}
+.control:hover {
+	color: #bbbbbb;
+}
+.control:active {
+	color: #8b8b8b;
+}
+.control.play-pause {
+	bottom: 10%;
+	left: 20%;
+}
+.control.stop {
+	bottom: 10%;
+	right: 20%;
+}
+.control.stop:disabled {
+	pointer-events: none;
+	color: #afafaf;
+}

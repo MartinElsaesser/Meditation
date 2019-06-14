@@ -1,0 +1,9 @@
+.timer {
+	font-variant-numeric: tabular-nums;
+	font-family: arial;
+	font-size: 30px;
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 20px;
+	line-height: 1;
+}
