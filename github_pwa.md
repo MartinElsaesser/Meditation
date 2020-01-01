@@ -30,6 +30,18 @@ Start url for github: /{repository}/
 	"start_url": "/Meditation/"
 }
 ```
+Local scope url: /
+```json
+{
+	"scope": "/"
+}
+```
+Scope url for github: /{repository}/
+```json
+{
+	"scope": "/Meditation/"
+}
+```
 
 ## index.html
 ### head
